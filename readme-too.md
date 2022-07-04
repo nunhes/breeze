@@ -223,7 +223,7 @@ p {
             <div class="flex items-center">
                 <h3 class="text-2xl font-bold text-white">Logo</h3>
             </div>
-
+    
             <!-- left header section -->
             <div class="flex items-center justify-between">
                 <button @click="isOpen = !isOpen" type="submit">
@@ -239,7 +239,7 @@ p {
                     <a href="#" class="text-base text-white ">Menu3</a>
                     <a href="#" class="text-base text-white ">Menu3</a>
                 </div>
-
+    
                 <!-- mobile navbar -->
                 <div class="mobile-navbar">
                     <!-- navbar wrapper -->
@@ -256,5 +256,27 @@ p {
                 <!-- end mobile navbar -->
             </div>
             <!-- right header section -->
-
+    
         </div>
+
+****
+
+### set Active links
+
+https://aprendible.com/series/laravel-desde-cero/lecciones/activacion-de-links-de-navegacion
+
+Imos a crear unha clase css (na cabeceira da aplicación):
+
+```css
+            .active a {
+                color: #20ccaa;
+                text-decoration: none;
+            }
+```
+
+A través da directiva ``request`` do propio framework podemos comprobar dinamicamente se estamos nunha determinada ruta, en caso afirmativo aplicaremos a nova clase, en caso negativo non ocorrerá nada.
+
+```php+HTML
+{{ request()->routeIs('home') ? 'active':'' }}
+```
+
