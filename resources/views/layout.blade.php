@@ -14,6 +14,14 @@
             <!-- Scripts -->
             <script src="{{ asset('js/app.js') }}" defer></script>
 
+    <style>
+        .active {
+            color: #02c442;
+            text-decoration: none;
+            border-bottom: #02c442 solid 3px;
+        }
+    </style>
+
 </head>
 
 <body class="antialiased">
@@ -30,12 +38,12 @@
 								<span class="font-semibold text-gray-500 text-lg">Bitsolto</span>
 							</a>
 						</div>
-						<!-- Primary Navbar items -->
+						<!-- Primary Navbar items      text-green-500 border-b-4 border-green-500 font-semibold -->
 						<div class="hidden md:flex items-center space-x-1">
-							<a href="{{ route('home') }}" class="py-4 px-2 text-green-500 border-b-4 border-green-500 font-semibold ">Inicio</a>
-							<a  href="{{ route('about') }}"  class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Servicios</a>
-							<a  href="{{ route('blog.index') }}"  class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Novas</a>
-							<a  href="{{ route('contact') }}"  class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Contacto</a>
+							<a href="{{ route('home') }}"         class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300 {{ request()->routeIs('home') ? 'active':'' }}">Inicio</a>
+							<a  href="{{ route('about') }}"       class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300 {{ request()->routeIs('about') ? 'active':'' }}">Servicios</a>
+							<a  href="{{ route('blog.index') }}"  class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300 {{ request()->routeIs('blog.index') ? 'active':'' }}">Novas</a>
+							<a  href="{{ route('contact') }}"     class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300 {{ request()->routeIs('contact') ? 'active':'' }}">Contacto</a>
 						</div>
 					</div>
 					<!-- Secondary Navbar items -->

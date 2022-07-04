@@ -26,7 +26,7 @@ Route::view('/acerca-de', 'about')->name('about');
 // Route::get('/blog', 'BlogController@index')->name('blog.index');
 // Route::get('/blog/{post:slug}', 'BlogController@show')->name('blog.show');
 
-// RUTAS NOE
+// RUTAS OE
 Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
 Route::get('/blog{post:slug}', [BlogController::class, 'show'])->name('blog.show');
 
