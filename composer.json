@@ -9,7 +9,7 @@
         "cviebrock/eloquent-sluggable": "8.0.8",
         "fruitcake/laravel-cors": "2.2.0",
         "guzzlehttp/guzzle": "7.4.3",
-        "laravel/framework": "8.83.13",
+        "laravel/framework": "9.40.1",
         "laravel/sanctum": "2.15.1",
         "laravel/tinker": "2.7.2"
     },
